@@ -1,0 +1,1528 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Roboto';
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.header__container {
+    padding: 25px 0 0 0;
+
+}
+.header__content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    margin-right: 29px;
+    width: 279px;
+    height: 60px;
+}
+.hamburger-menu{
+    display: none;
+
+}
+
+#menu__toggle {
+    opacity: 0;
+}
+
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 18px;
+    top: 25px;
+    width: 22px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #F30000;
+}
+.menu__btn > span::before {
+    content: '';
+    top: -5px;
+}
+.menu__btn > span::after {
+    content: '';
+    top: 5px;
+}
+
+
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width:100%;
+    height: 100%;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background: #863737;
+    box-shadow: 1px 0px 6px rgba(131, 14, 14, 0.2);
+}
+
+.menu__item-ad{
+    display: block;
+    padding: 12px 24px;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(-90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    transition-duration: .25s;
+}
+.menu__box {
+    transition-duration: .25s;
+}
+.menu__item {
+    transition-duration: .25s;
+}
+.user-info,
+.user__balance{
+    font-size: 14px;
+    font-weight: 500;
+}
+.user__name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 120%;
+
+}
+.sign {
+    text-decoration: none;
+}
+
+.balance {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.header__info {
+    display: flex;
+    align-items: center;
+}
+.useful-link-setting{
+margin-right: 25px;
+}
+.header__social-link {
+    display: flex;
+}
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.social-icon :last-child {
+    margin-right: 0px;
+}
+
+.site-language {
+    margin-top: 11.5px;
+}
+
+.language-icon {
+    margin-right: 10px;
+    width: 20px;
+    height: 14px;
+    border-radius: 2px;
+}
+
+.language__value {
+    margin-right: 17px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+.usa-language {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.menu {
+    margin-top: 15px;
+}
+
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    height: 34px;
+    background: #F30000;
+    border-radius: 8px;
+}
+
+
+.menu__item {
+    border-right: 1px solid #ffffff;
+    height: 24px;
+    margin-right: 25px;
+    padding-right: 25px;
+}
+.menu__item:first-child {
+    margin-left: 25px;
+}
+
+.menu__item:nth-child(3){
+    padding-right: 27px;
+}
+
+.menu__item:nth-child(4) {
+    padding-right: 30px;
+}
+
+.menu__link {
+    font-weight: 500;
+
+    font-size: 15.49px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    letter-spacing: 0.3px;
+}
+
+.menu__link:hover {
+    text-decoration-line: underline;
+}
+
+.my-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    width: 178px;
+    height: 34px;
+    background: #0061A3;
+    border-radius: 8px;
+}
+
+.account-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15.4px;
+    letter-spacing: .2px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+}
+
+.header__banner {
+    margin-top: 29.5px;
+}
+.header__content-row-adaptive,
+.header__content-row-adaptive-link{
+    display: none;
+}
+@media screen and (max-width: 908px) {
+    .hamburger-menu{
+        display: block;
+    }
+    .header__container{
+        padding: 0;
+    }
+    .header__content-row{
+        padding: 16px 16px 0;
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .header__content-row-adaptive-link{
+        display: block;
+    }
+    .header__content-row-adaptive{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+    .header__avatar-icon{
+        width: 24px;
+        height: 24px;
+    }
+    .header__logo{
+        display: none;
+    }
+    .header__logo-adaptive {
+
+        width: 182px;
+        height: 44px;
+    }
+    .useful-link-setting,
+    .site-language
+    {
+        display: none;
+    }
+
+    .user__account{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4px;
+    }
+    .user__name,
+    .balance,
+    .sign,
+    .user__balance
+    {
+        font-size: 14px;
+    }
+
+    .header__info{
+        display: flex;
+        flex-direction: column;
+    }
+    .header__banner {
+        margin-top: 25.5px;
+
+    }
+    .header__banner-img{
+        min-height: 179px;
+    }
+
+}
+
+.content {
+    margin-top: 30px;
+}
+
+.benefits__container {
+    display: flex;
+    padding: 0 15px;
+    flex-wrap: wrap;
+    column-gap: 15px;
+}
+
+.benefits__item {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    width: 380px;
+
+}
+
+.benefits__body {
+    display: flex;
+    padding: 4px 7px 4px 4px;
+}
+
+.benefits__img {
+    margin-right: 5px;
+}
+
+.benefits__img-one {
+    margin-top: 4px;
+}
+
+.benefits__img-two {
+    margin-top: 4px;
+}
+
+.benefits__img-thee {
+    margin: 11px 0 0 -5px;
+    width: 80.99px;
+    height: 61.6px;
+}
+
+.benefits__content {
+    width: 100%;
+}
+
+.benefits__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.benefits__title {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.benefits__link a {
+    margin: 0px 6px 0px 0;
+
+}
+.benefits__link a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-decoration-line: underline;
+    color: #0061A3;
+
+}
+
+.benefits__sub-titles {
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #5F5F5F;
+}
+
+@media screen and (max-width: 1200px) {
+    .content {
+        margin-top: 12px;
+    }
+
+    .benefits__container {
+        row-gap: 15px;
+        justify-content: center;
+    }
+
+    .benefits__link {
+        font-size: 13px;
+    }
+}
+
+.lottery-container {
+    margin-top: 75px;
+    padding: 0 9px;
+}
+
+.upcoming__lottery__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    text-transform: uppercase;
+}
+
+.upcoming__lottery__row {
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    column-gap: 15px;
+    padding: 0 7px;
+}
+.upcoming__lottery__title-adaptive{
+    display: none;
+}
+@media screen and (max-width: 1200px) {
+    .upcoming__lottery__row {
+        row-gap: 15px;
+        justify-content: center;
+    }
+
+    .lottery-container {
+        margin-top: 22px
+    }
+}
+.upcoming__lottery__title{
+    display: none;
+}
+.upcoming__lottery__title-adaptive{
+    display: block;
+}
+.upcoming__lottery__title {
+    padding: 2px 0 0 7px;
+}
+.upcoming__lottery__item {
+    max-width: 380px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    flex: 1 0 auto;
+}
+
+.upcoming__lottery__body {
+    display: flex;
+    flex-direction: column;
+}
+
+.upcoming__lottery__content {
+    display: flex;
+}
+
+.upcoming__lottery__img {
+    width: 140px;
+    height: 80px;
+    margin: 7.38px 29.68px 5.18px 29.45px;
+}
+
+.upcoming__lottery__info {
+    margin: 28.5px 0 0 -1px;
+}
+
+.upcoming__lottery__info__header {
+    display: flex;
+    margin: -5px 0 0 0;
+}
+
+.upcoming__lottery__title__icon {
+    width: 20px;
+    height: 14px;
+    margin-right: 10px;
+}
+
+.upcoming__lottery__info__title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+
+}
+
+.upcoming__lottery__prize {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 22px;
+    color: #13902A;
+    margin: 14.5px 0 6px -5px;
+
+
+}
+
+.upcoming__lottery__play {
+    display: flex;
+    align-items: center;
+    height: 57.79px;
+    background: #0061A3;
+    mix-blend-mode: normal;
+    padding: 3.43px 0 0 12.45px;
+   border-bottom-right-radius: 8px ;
+    border-bottom-left-radius: 8px ;
+
+}
+
+.upcoming__lottery__play__button {
+    padding: 6px 52px;
+    margin-right: 39.54px;
+    margin-top: -5px;
+}
+
+.lottery__play__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    background: #F7D300;
+    border-radius: 8px;
+}
+
+.lottery__play__button:hover {
+    background: #cdaf06;
+}
+
+.upcoming__lottery__play__time {
+    display: flex;
+    margin-top: -5px;
+}
+
+.upcoming__lottery__play__time-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 4px;
+}
+
+.upcoming__lottery__play__time-clock-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+@media screen and (max-width: 908px) {
+    .upcoming__lottery__title {
+        font-size: 18px;
+    }
+
+    .upcoming__lottery__row {
+        margin-top: 11px;
+    }
+
+    .upcoming__lottery__img {
+        width: 127px;
+        height: 80px;
+        margin: 3px 35px 7px 24px;
+
+    }
+    .upcoming__lottery__info{
+        margin: 20.5px 0 0 9px;
+    }
+    .upcoming__lottery__info__header{
+        margin:0 0 0 -13px;
+    }
+    .upcoming__lottery__info__title {
+        font-size: 14px;
+    }
+    .upcoming__lottery__prize {
+        font-size: 24px;
+        margin: 12px 0 0 -13px;
+    }
+
+    .upcoming__lottery__play__button {
+        padding: 5px 38px;
+        margin:  0 0 0 3px;
+    }
+    .upcoming__lottery__play__time{
+        margin:0 0 0 51px;
+    }
+}
+
+.play__upcoming__lottery {
+    margin-top: 70.65px;
+    padding: 0 6px;
+}
+
+.play__upcoming__lottery__title {
+
+}
+
+.lottery__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+    height: 45px;
+    background: #F30000;
+    border-radius: 8px;
+}
+
+.play__upcoming__lottery__table {
+    padding: 15px 35px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+@media screen and (max-width: 908px) {
+    .play__upcoming__lottery {
+        margin-top: 32px;
+    }
+
+    .play__upcoming__lottery__table {
+        padding: 15px 0 0;
+        justify-content: center;
+    }
+}
+
+.play__upcoming__lottery__item {
+    width: 208px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    padding: 12.09px 0 13px 0;
+    position: relative;
+}
+
+.play__upcoming__lottery__star-icon {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+}
+
+.play__upcoming__lottery__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.play__upcoming__lottery__img {
+    width: 96px;
+    height: 94px;
+}
+
+.play__upcoming__lottery__content {
+    display: flex;
+    margin-top: 25px;
+
+}
+.play__upcoming__lottery__title__icon{
+margin-right: 4px;
+}
+.play__upcoming__lottery__info__title{
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+.play__upcoming__lottery__title__icon {
+    width: 20px;
+    height: 14px;
+    margin-right: 3px;
+}
+
+.play__upcoming__lottery__prize {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+    margin-top: 8px;
+}
+
+.play__upcoming__lottery__play {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.play__upcoming__lottery__play__time {
+    display: flex;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #0061A3;
+}
+
+.play__upcoming__lottery__play__time-icon {
+    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+}
+
+.play__upcoming__lottery__play__button {
+    margin-top: 12px;
+    padding: 7px 57px;
+}
+
+.play__upcoming__lottery__item-link {
+    margin-left: auto;
+
+}
+
+.play__upcoming__lottery__link {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #0061A3;
+    display: flex;
+    justify-content: flex-end;
+     padding: 10px 36px 0 0;
+}
+
+.play__upcoming__lottery__item-link-adaptive {
+    display: none;
+}
+.play__upcoming__lottery__item__disappearing {
+    display: block;
+}
+@media screen and (max-width: 908px) {
+    .play__upcoming__lottery__title {
+        font-size: 16px;
+    }
+    .play__upcoming__lottery__star-icon {
+        width: 11.7px;
+        height: 11.62px;
+        top: 10px;
+        right: 5px;
+    }
+
+    .play__upcoming__lottery__item {
+        max-width: 155px;
+        max-height: 230px;
+    padding: 16px 0 10px 0;
+    }
+    .play__upcoming__lottery__content{
+        margin-top: 11px;
+    }
+    .play__upcoming__lottery__info__title{
+        font-size: 12px;
+    }
+    .play__upcoming__lottery__item__disappearing {
+        display: none;
+    }
+
+    .play__upcoming__lottery__img {
+        width: 80.84px;
+        height: 77.76px;
+        margin-top: 3px;
+    }
+    .play__upcoming__lottery__play__time-icon {
+        margin-right: 4px;
+        width: 12px;
+        height: 12px;
+    }
+
+
+    .play__upcoming__lottery__prize {
+        font-size: 18px;
+    }
+    .play__upcoming__lottery__play__time {
+    align-items: center;
+    }
+    .play__upcoming__lottery__play__time-clock-text {
+    font-size: 14px;
+    }
+    .play__upcoming__lottery__play__button {
+        padding: 6px 36px;
+        margin: 6px 0 0 0;
+    }
+
+    .play__upcoming__lottery__link {
+        font-size: 16px;
+
+    }
+
+    .play__upcoming__lottery__item-link {
+        margin-top: 0;
+        display: none;
+    }
+
+    .play__upcoming__lottery__item-link-adaptive {
+        display: block;
+        padding:0 0 0 0;
+        margin: 0 -16px 0 0;
+    }
+}
+
+.lottery__winner-container {
+    display: flex;
+    margin-top: 75px;
+    column-gap: 15px;
+    flex-wrap: wrap;
+    padding: 0 7px;
+}
+
+.biggest__lottery__winner {
+    max-width: 775px;
+    flex: 1 1 auto;
+}
+
+.biggest__lottery__winner__body {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    margin-top: 20px;
+    padding: 16px 0;
+    border-bottom: 0;
+}
+
+.biggest__lottery__winner__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -61px;
+}
+
+.biggest__lottery__winner__header__img {
+    margin-right: 20px;
+}
+
+.biggest__lottery__winner__header__title {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 36px;
+    text-transform: uppercase;
+   column-gap: 10px;
+}
+
+.biggest__lottery__winner__header__title-custom__text {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 22px;
+    color: #0061A3;
+    text-transform: uppercase;
+}
+
+.biggest__lottery__winner__content {
+    margin: 25px 0 0 28px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.biggest__lottery__winner__result {
+    margin-right: 13.28px;
+}
+
+.biggest__lottery__winner__result__img {
+    width: 404.69px;
+    height: 206.79px;
+}
+
+.biggest__lottery__winner__result__statistic {
+    display: flex;
+    margin: 19.75px 0 0 31px
+}
+
+.biggest__lottery__winner__result__statistic-text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin: 3px 9px 0 24px
+}
+
+.biggest__lottery__winner__result__statistic-numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.biggest__lottery__winner__result__statistic-numbers-icon-list {
+    display: flex;
+    column-gap: 4px;
+}
+
+.biggest__lottery__winner__result__statistic-numbers-date {
+    margin-top: 5px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+}
+
+.biggest__lottery__winner__story__body {
+    display: flex;
+    flex-direction: column;
+    max-width: 230px;
+    flex: 0 1 auto;
+}
+
+.biggest__lottery__winner__story__title {
+    font-weight: 600;
+    font-size: 16px;
+
+}
+
+.biggest__lottery__winner__story__sub-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 15px;
+}
+
+.biggest__lottery__winner__story__link__full-story {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    margin-top: 33px;
+    text-align: center;
+    color: #0061A3;
+}
+
+.biggest__lottery__winner__story__button {
+    padding: 10px 78px;
+    margin-top: 31px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+}
+
+@media screen and (max-width: 908px) {
+    .lottery__winner-container {
+        margin-top: 35px;
+        padding: 0 6px;
+        justify-content: center;
+    }
+
+
+    .biggest__lottery__winner__body {
+
+        padding: 17px 0 0px 0;
+
+    }
+    .biggest__lottery__winner__content {
+        padding: 0 10px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .biggest__lottery__winner__header__img {
+        width: 40px;
+        height: 40px;
+
+    }
+    .biggest__lottery__winner__header {
+        margin-left: 0px;
+    }
+
+    .biggest__lottery__winner__header__title,
+    .biggest__lottery__winner__header__title-custom__text {
+        font-size: 27px;
+    }
+
+    .biggest__lottery__winner__result {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .biggest__lottery__winner__result__img{
+        width: 371.65px;
+        height: 171.5px;
+        margin: 15px 0 0 0;
+    }
+    .biggest__lottery__winner__story {
+        justify-content: center;
+
+    }
+    .biggest__lottery__winner__result__statistic {
+
+        margin: 16.75px 0 0 31px
+    }
+.biggest__lottery__winner__result__statistic-text {
+    margin: 0 14px 0 0
+}
+    .biggest__lottery__winner__story__body {
+        max-width: none;
+        margin-top: 13px;
+    }
+    .biggest__lottery__winner__story__title{
+        text-align: center;
+    }
+    .biggest__lottery__winner__story__sub-title {
+        padding: 0 5px;
+        margin-top: 7px;
+    }
+    .biggest__lottery__winner__story__link__full-story{
+        font-size: 13px;
+        margin-top: 12px;
+    }
+    .biggest__lottery__winner__story__button{
+        padding: 6px 88px;
+        max-width: 256px;
+        margin: 16px auto;
+        font-size: 14px;
+    }
+}
+
+.our__latest__lottery__winner {
+    max-width: 380px;
+    flex: 1 0 auto;
+
+}
+
+.our__latest__lottery__winner-total__prizes {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    margin-top: 15px;
+    padding: 9px 0 8px 0;
+    display: flex;
+    row-gap: 5px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.our__latest__lottery__winner-total__prizes-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.our__latest__lottery__winner-total__prizes-sum {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 22px;
+    color: #13902A;
+}
+
+.our__latest__lottery__winner-total__prizes-tickets {
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 120%;
+}
+
+.our__latest__lottery__winner-total__prizes-tickets-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.our__latest__lottery__winner__list {
+    margin-top: 29px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+
+.our__latest__lottery__winner__item {
+    display: flex;
+    max-height: 78px;
+    padding: 5px 0 9px 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+}
+.our__latest__lottery__winner__item-adaptive{
+    display: none;
+
+}
+.our__latest__lottery__winner__item:last-child{
+    border-bottom: 0;
+    border-radius: 8px 8px 0 0;
+    max-height: 62px;
+}
+.our__latest__lottery__winner__icon {
+    width: 75.32px;
+    height: 58px;
+    margin-right: 15.43px;
+}
+
+.our__latest__lottery__winner__body {
+    display: flex;
+    flex-direction: column;
+    padding:  6px 0 0 0;
+}
+
+.our__latest__lottery__winner__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+
+}
+
+.our__latest__lottery__winner__info {
+    margin-top: -4px;
+    display: flex;
+}
+
+.our__latest__lottery__winner-country {
+    margin-right: 5px;
+    width: 20px;
+    height: 18.18px;
+}
+
+.our__latest__lottery__winner__full-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+}
+
+.our__latest__lottery__winner__number__draw {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #5F5F5F;
+
+}
+
+@media screen and (max-width: 908px) {
+    .our__latest__lottery__winner {
+        margin-top: 36px;
+    }
+    .our__latest__lottery__winner__list {
+        margin-top: 18px;
+        row-gap: 9px
+    }
+
+    .our__latest__lottery__winner__item-adaptive{
+        display: flex;
+    }
+    .our__latest__lottery__winner__item:last-child{
+        height: 39px;
+        overflow: hidden;
+    }
+    .our__latest__lottery__winner__date {
+        margin-top: -3px;
+
+    }
+
+}
+
+.lottery__questions-container {
+    margin-top: 78px;
+    padding: 0 0 0 8px ;
+}
+
+.lottery__questions__list {
+    margin-top: 33px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+    padding: 0 0 0 17px ;
+}
+
+.lottery__questions__body {
+    display: flex;
+    align-items: center;
+    max-width: 731px;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #E0E0E0;;
+}
+
+.lottery__question {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #0061A3;
+}
+
+.lottery__question__arrow {
+    width: 11px;
+    height: 7px;
+}
+
+.footer {
+    margin-top: 75px;
+    background: url("img/footer.png") no-repeat, linear-gradient(0deg, rgba(224, 224, 224, 0.47) 0%, rgba(225, 225, 225, 0.16) 20.75%, rgba(255, 254, 254, 0.26) 84.14%, #FFFFFF 126.52%);;
+    padding: 103px 120px 55px 108px;
+
+}
+
+.footer__social-link {
+    padding: 33px 26px 0 0;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer__whatsapp__link {
+    display: flex;
+}
+
+.footer__whatsapp__img {
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+}
+
+.footer__whatsapp__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.footer__whatsapp__sub-title {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 21px;
+    ;
+}
+
+.footer__social__network-link {
+    display: flex;
+    column-gap: 10px;
+}
+
+.footer__social-icon {
+
+}
+
+.footer__row {
+    display: flex;
+    column-gap: 190px;
+    margin-top: 33px;
+    flex-wrap: wrap;
+}
+
+.footer__column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    flex: 1 0 auto;
+    max-width: 249px;
+
+}
+.footer__column-item-first{
+    margin-top: 15px;
+}
+.footer__column-item-adaptive{
+    display: none;
+}
+.footer__column-item-contact-us ,
+.footer__column-item-privacy{
+    margin-top: 4px;
+}
+.footer__column-item__adaptive-row:last-child {
+    margin-top: -3px;
+}
+
+.footer__column-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+
+}
+
+.footer__column-link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer__column__custom-link {
+    font-weight: 700;
+}
+
+.footer__column__sub-titles {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 120%;
+    margin-top: 8px;
+}
+
+.footer__column__address {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    margin-top: -2px;
+}
+
+.footer__column__payments-method__row {
+    display: flex;
+    gap: 10px;
+}
+
+.footer__column__payments-method__table {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.footer__social__network-link-security {
+    display: none;
+}
+
+.footer-security__column {
+    margin-top: 20px;
+
+}
+
+.footer-security__row {
+    display: flex;
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 908px) {
+    .lottery__questions-container{
+        display: none;
+    }
+    .footer {
+        margin-top: 11px;
+        padding: 48px 44px 0 16px;
+        background: url("img/footer-adaptive.png") no-repeat, linear-gradient(0deg, rgba(224, 224, 224, 0.47) 0%, rgba(225, 225, 225, 0.16) 20.75%, rgba(255, 254, 254, 0.26) 84.14%, #FFFFFF 126.52%);;
+
+    }
+    .footer__social-link {
+        padding: 39px 0 0 0;
+    }
+    .footer__social__network-link {
+        display: none;
+    }
+    .footer__whatsapp__link{
+        margin:  3px 0 0 0;
+    }
+    .footer__whatsapp__sub-title{
+        margin-top: -5px;
+    }
+    .footer__whatsapp__img {
+        width: 31px;
+        height: 34px;
+        margin-right: 14px;
+    }
+    .footer__whatsapp__title {
+        font-size: 14px;
+    }
+    .footer__row {
+        column-gap: 0;
+        margin-top: 18px;
+        justify-content: center;
+    }
+    .footer__column-item-adaptive{
+        display: block;
+        margin-top: 10px;
+    }
+    .footer__column-item-first{
+        margin: 0;
+    }
+    .footer__column {
+        flex-direction: row;
+        column-gap: 16px;
+        max-width: none;
+    }
+
+    .footer__column-adaptive {
+        flex-direction: column;
+    }
+
+    .footer__column-item__adaptive-row {
+        flex: 1 0 auto;
+        margin-top: 0;
+    }
+    .footer__column-item__adaptive-row:last-child {
+        margin-top: 27px;
+    }
+    .footer__column-adaptive-smart-winners {
+        flex: 0 1 auto;
+        margin-top: 23px;
+
+    }
+    .footer__column-title{
+        font-size: 14px;
+        padding-left: 3px;
+    }
+    .footer__column__useful-links-title{
+        font-weight: 700;
+        font-size: 16px;
+        margin: -7px 0 0px -2px
+    }
+    .footer__column__sub-titles{
+        margin-top: -6px;
+        font-size: 10px;
+    }
+    .footer__column__address{
+        font-size: 10px;
+        margin-top: -2px;
+    }
+    .footer__column-adaptive__payments-security {
+        flex-direction: row;
+        align-items: flex-start;
+        margin-top: 15px;
+        padding: 0 5px;
+        column-gap: 34px;
+    }
+
+    .footer-security__column {
+        align-items: flex-start;
+        margin: 0 -8px 0 0;
+    }
+
+    .footer-security__row {
+        margin-top: 12px;
+    }
+
+    .footer__security-social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer__social__network-link-security {
+        display: flex;
+        column-gap: 10px;
+        margin-top: 18px;
+
+    }
+
+    .footer__column-link {
+        font-size: 14px;
+
+    }
+}
