@@ -1252,7 +1252,7 @@ margin-right: 4px;
     display: flex;
     flex-direction: column;
     row-gap: 18px;
-    padding: 0 0 0 17px ;
+    padding: 0 0 0 0px ;
 }
 
 .lottery__questions__body {
@@ -1270,6 +1270,7 @@ margin-right: 4px;
     font-size: 18px;
     line-height: 24px;
     color: #0061A3;
+    padding: 0 0 0 17px ;
 }
 
 .lottery__question__arrow {
@@ -1279,7 +1280,7 @@ margin-right: 4px;
 
 .footer {
     margin-top: 75px;
-    background: url("img/footer.png") no-repeat, linear-gradient(0deg, rgba(224, 224, 224, 0.47) 0%, rgba(225, 225, 225, 0.16) 20.75%, rgba(255, 254, 254, 0.26) 84.14%, #FFFFFF 126.52%);;
+    background: url("../img/footer/footer.png") no-repeat, linear-gradient(0deg, rgba(224, 224, 224, 0.47) 0%, rgba(225, 225, 225, 0.16) 20.75%, rgba(255, 254, 254, 0.26) 84.14%, #FFFFFF 126.52%);;
     padding: 103px 120px 55px 108px;
 
 }
@@ -1418,7 +1419,7 @@ margin-right: 4px;
     .footer {
         margin-top: 11px;
         padding: 48px 44px 0 16px;
-        background: url("img/footer-adaptive.png") no-repeat, linear-gradient(0deg, rgba(224, 224, 224, 0.47) 0%, rgba(225, 225, 225, 0.16) 20.75%, rgba(255, 254, 254, 0.26) 84.14%, #FFFFFF 126.52%);;
+        background: url("../img/footer/footer-adaptive.png") no-repeat, linear-gradient(0deg, rgba(224, 224, 224, 0.47) 0%, rgba(225, 225, 225, 0.16) 20.75%, rgba(255, 254, 254, 0.26) 84.14%, #FFFFFF 126.52%);;
 
     }
     .footer__social-link {

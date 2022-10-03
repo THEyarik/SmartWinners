@@ -1,0 +1,497 @@
+
+.content-lottery-groups {
+
+}
+
+.lottery__syndicate {
+    padding: 30px 15px 0 15px;
+}
+
+.lottery__syndicate__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.lottery__syndicate__header-title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    text-transform: uppercase;
+    color: #000000;
+
+}
+
+.lottery__syndicate__header-sub-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 15px;
+}
+
+.lottery__syndicate__header-link a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #0069AA;
+    order: 1;
+}
+
+.lottery__syndicate-search__form {
+    margin-top: 30px;
+    position: relative;
+}
+
+.lottery__syndicate-search__form-text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+}
+
+.lottery__syndicate-search__input {
+    width: 100%;
+    border-radius: 6px;
+    height: 51px;
+    border: 1px solid #E0E0E0;
+    margin-top: 7px;
+
+}
+
+.lottery__syndicate-search__input-item {
+    position: absolute;
+    top: 48px;
+    right: 19px;
+}
+@media screen and (max-width: 908px) {
+    .lottery__syndicate {
+        padding: 22px 15px 0 15px;
+    }
+    .lottery__syndicate__header-body {
+        order: 2;
+    }
+    .lottery__syndicate__header-link a {
+        order: 1;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px
+    }
+    .lottery__syndicate__header-link{
+        margin-left: auto;
+    }
+    .lottery__syndicate__header-body{
+        margin-top: 4px;
+    }
+    .lottery__syndicate__header-title{
+
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+    }
+    .lottery__syndicate__header-sub-title{
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 120%;
+        margin-top: 12px;
+    }
+    .lottery__syndicate-search__form {
+        margin-top: 25px;
+
+    }
+}
+.lottery__syndicate-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 56px;
+    row-gap: 30px;
+}
+
+.lottery__syndicate-item {
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    width: 100%;
+    padding: 30px 59px 28px 59px;
+}
+
+.lottery__syndicate-body {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.lottery__syndicate__logo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.lottery__syndicate__logo {
+    min-width: 150px;
+    min-height: 150px;
+}
+
+.lottery__syndicate__logo-title {
+    margin-top: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.lottery__syndicate__logo-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    margin-top: 5px;
+}
+
+.lottery__syndicate__logo-link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    text-decoration-line: underline;
+    color: #0061A3;
+    margin-top: 10px;
+}
+
+.lottery__syndicate__main-content {
+    max-width: 627px;
+    border-right: 1px solid #E0E0E0;
+    border-left: 1px solid #E0E0E0;
+    padding: 0 30.69px;
+    margin: 0 41.2px 0 42.8px;
+
+}
+
+.lottery__syndicate__main-content-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    display: flex;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 0 0 10px 46px;
+    width: 565.63px;
+
+
+}
+.lottery__syndicate__main-content-title__first-part{
+    display: flex;
+}
+.lottery__syndicate__main-content-title-custom {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 120%;
+    text-decoration-line: underline;
+    margin: 0 8px 0 10px;
+    display: flex;
+
+}
+
+.lottery__syndicate__main-content-title-custom-icon {
+    margin-left: 3px;
+}
+
+.lottery__syndicate__main-content-sub-title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    color: #5F5F5F;
+    margin-top: 10px;
+}
+
+.lottery__syndicate__main-content__group-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 15px;
+}
+.lottery__syndicate__main-content__group-list-amigos-adaptive,
+.lottery__syndicate__main-content__group-list-misha-adaptive{
+    display: none;
+}
+.lottery__syndicate__main-content__group-item {
+    display: flex;
+}
+
+.lottery__syndicate__main-content__group-logo {
+    width: 44.67px;
+    height: 22px;
+    margin-right: 15px;
+}
+
+.lottery__syndicate__main-content__group-name {
+    display: flex;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+}
+.lottery__syndicate__main-content__group-name-custom-text-adaptive{
+    display: none;
+}
+.lottery__syndicate__main-content__group-number {
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+.lottery__syndicate__main-content__group-number-green {
+    color: #13902A;
+}
+
+.lottery__syndicate__main-content__group-name-custom {
+    font-weight: 800;
+    margin-right: 5px;
+}
+
+.lottery__syndicate__jackpot-content {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.lottery__syndicate__jackpot-content-total-sum-prize {
+    margin-top: 10px;
+}
+
+.lottery__syndicate__jackpot-content-statistic {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 10px;
+    max-width: 183px;
+}
+
+.lottery__syndicate__jackpot-content-statistic-custom {
+    font-weight: 700;
+}
+
+.lottery__syndicate__jackpot-content-text-average {
+    margin-top: 10px;
+}
+
+.jackpot-content-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #5F5F5F;
+}
+
+.lottery__syndicate__jackpot-content-average-sum-prize {
+    margin: 5px 0 0 15px;
+}
+
+.jackpot-content-sum-prize {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    text-transform: uppercase;
+    color: #13902A;
+}
+
+.lottery__syndicate__jackpot-content-button {
+    padding: 9px 20px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    max-width: 180px;
+}
+
+.lottery__syndicate-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 31px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 120%;
+}
+
+.lottery__syndicate-button-prev {
+    display: flex;
+    margin-right: 60px;
+    align-items: center;
+}
+
+.lottery__syndicate-button-prev-icon {
+
+}
+
+.lottery__syndicate-button-next {
+    display: flex;
+    align-items: center;
+}
+
+.lottery__syndicate-button-next-icon {
+
+}
+
+.lottery-groups-questions {
+    margin-top: 76px;
+    padding: 0 15px;
+}
+.lottery__questions__body{
+    max-width: 756px;
+}
+.lottery__question__arrow{
+    width: 23.57px;
+    height: 24px;
+}
+@media screen and (max-width: 908px) {
+    .lottery__syndicate-list {
+        margin-top: 30px;
+        row-gap: 37px;
+    }
+    .lottery__syndicate__main-content__group-list-amigos,
+    .lottery__syndicate__main-content__group-list-misha{
+        display: none;
+    }
+    .lottery__syndicate__main-content__group-list-amigos-adaptive,
+    .lottery__syndicate__main-content__group-list-misha-adaptive{
+        display: block;
+    }
+    .lottery__syndicate-item {
+
+        padding: 20px 0 15px 0;
+    }
+    .lottery__syndicate-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .lottery__syndicate__main-content {
+        max-width: none;
+        border-right: 0;
+        border-left: 0;
+        padding: 0 0 0 0;
+        margin: 0 ;
+
+    }
+    .lottery__syndicate__logo-link {
+        margin-top: 4px;
+    }
+
+    .lottery__syndicate__main-content-title{
+        font-size: 20px;
+       flex-wrap: wrap;
+        width: 311px;
+        justify-content: center;
+        padding: 0 0 12px 0 ;
+        margin-top: 30px;
+    }
+    .lottery__syndicate__main-content-sub-title {
+
+        padding: 11px 0 0 18px;
+    }
+    .lottery__syndicate__main-content-title-custom-icon{
+        width: 14px;
+        height: 90%;
+
+    }
+    .lottery__syndicate__main-content{
+        border-bottom:1px solid #E0E0E0 ;
+        padding-bottom: 16px;
+    }
+    .lottery__syndicate__main-content__group-list{
+        max-width: 311px;
+        padding: 0 0 0 17px;
+        margin-top: 11px;
+        row-gap: 13px;
+    }
+    .lottery__syndicate__main-content-title-custom{
+        font-size: 20px;
+        align-items: center;
+        margin: 0 0 0 10px;
+    }
+    .lottery__syndicate__main-content__group-name{
+        font-size: 16px;
+        display: block;
+
+    }
+    .lottery__syndicate__main-content__group-name-custom-text{
+        display: none;
+    }
+    .lottery__syndicate__main-content__group-name-custom-text-adaptive{
+        display: inline;
+    }
+    .lottery__syndicate__main-content__group-number {
+        margin-right: 1px;
+    }
+    .lottery__syndicate__main-content__group-name-custom {
+        margin-right: -2px;
+    }
+    .lottery__syndicate__main-content__group-number-green{
+        color: black;
+    }
+    .lottery__syndicate__main-content__group-logo{
+        width: 35px;
+        height: 100%;
+        margin-right: 7px;
+    }
+    .lottery__syndicate__jackpot-content{
+        min-width: 311px;
+        margin-top: 16px;
+    }
+    .lottery__syndicate__jackpot-content-average-sum-prize{
+        padding: 0;
+    }
+    .lottery__syndicate__jackpot-content-statistic {
+        display: flex;
+        max-width: 311px;
+        column-gap: 3px;
+    }
+
+  .jackpot-content-text {
+        padding: 0 0 0 26px;
+    }
+
+  .jackpot-content-sum-prize{
+      font-weight: 700;
+      font-size: 24px;
+  }
+  .lottery__syndicate__jackpot-content-total-sum-prize{
+      padding: 0 0 0 42px;
+  }
+
+    .lottery__syndicate__jackpot-content-statistic{
+       padding: 0 0 0 40px;
+        margin-top: 0;
+    }
+    .lottery__syndicate__jackpot-content-average-sum-prize{
+        padding: 0 0 0 28px;
+    }
+    .lottery__syndicate__jackpot-content-button{
+        min-width: 328px;
+        padding: 14px 20px;
+        margin-top: 24px;
+    }
+    .lottery__syndicate-button{
+        display: none;
+    }
+    .lottery-groups-questions{
+        margin-top: 42px;
+    }
+    .lottery__questions__list {
+        margin-top: 24px;
+        row-gap: 15px;
+    }
+    .lottery__questions__title{
+        font-weight: 500;
+        font-size: 18px;
+    }
+    .lottery__question{
+        font-weight: 500;
+        font-size: 16px;
+        padding: 0;
+    }
+    .footer {
+        margin-top: 23px;
+    }
+}
